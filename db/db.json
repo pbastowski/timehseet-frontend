@@ -14,7 +14,8 @@
         },
         {
           "date": "2019-11-04",
-          "sick": 8
+          "sick": 7,
+          "worked": 1
         },
         {
           "date": "2019-11-05",
@@ -200,6 +201,11 @@
       "title": "sertwert",
       "done": false,
       "id": 72
+    },
+    {
+      "title": "jjkjk",
+      "done": false,
+      "id": 73
     }
   ]
 }

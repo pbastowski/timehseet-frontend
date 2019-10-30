@@ -4,10 +4,15 @@
 
         <v-app-bar app color="primary" dark>
             <v-app-bar-nav-icon
-                @click.stop="$store.state.sidenav.open = !$store.state.sidenav.open"
+                @click.stop="
+                    $store.state.sidenav.open = !$store.state.sidenav.open
+                "
             ></v-app-bar-nav-icon>
             <v-toolbar-title>
-                <img src="~/assets/logo.png" style="width: 100px;padding-top:8px;" />
+                <img
+                    src="~/assets/logo.png"
+                    style="width: 100px;padding-top:8px;"
+                />
             </v-toolbar-title>
 
             <v-spacer></v-spacer>

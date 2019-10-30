@@ -4,7 +4,7 @@ export default {
 
     plugins: ['plugins/main.js', './plugins/mini-toastr.js'],
 
-    modules: ['@nuxtjs/axios', '@nuxtjs/auth', '@nuxtjs/proxy'],
+    modules: ['@nuxtjs/pwa', '@nuxtjs/axios', '@nuxtjs/auth', '@nuxtjs/proxy'],
 
     buildModules: ['@nuxtjs/vuetify'],
 
