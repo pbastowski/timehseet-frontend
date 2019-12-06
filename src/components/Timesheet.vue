@@ -6,6 +6,30 @@
             Xitems-per-page="15"
             class="elevation-1"
         >
+            <template v-slot:item="scope">
+                <tr style="vertical-align: top;">
+                    <td v-for="header in scope.headers" :align="header.align">
+                        <v-text-field
+                            v-if="header.value === 'date'"
+                            type="date"
+                            v-model="scope.item.date"
+                        />
+
+                        <v-textarea
+                            v-else-if="header.value === 'text'"
+                            v-model="scope.item.text"
+                        />
+
+                        <v-text-field
+                            v-else
+                            type="number"
+                            v-model.number="scope.item[header.value]"
+                        />
+                    </td>
+                </tr>
+            </template>
+
+            <!--
             <template v-slot:item.date="{ item }">
                 <v-text-field
                     style="width: 100px;"
@@ -31,6 +55,10 @@
             <template v-slot:item.doctor="{ item }">
                 <v-text-field type="number" v-model.number="item.doctor" />
             </template>
+            <template v-slot:item.text="{ item }">
+                <v-textarea v-model="item.text" />
+            </template>
+-->
         </v-data-table>
     </div>
 </template>
@@ -39,18 +67,9 @@
 export default {
     data: () => ({
         headers: [
-            { text: 'date', value: 'date' },
-            { text: 'worked', value: 'worked' },
-            { text: 'internal hours', value: 'internal' },
-            { text: 'courses', value: 'courses' },
-            { text: 'leave', value: 'leave' },
-            { text: 'sick', value: 'sick' },
-            { text: 'doctor', value: 'doctor' }
-            // { text: 'special_leave' },
-            // { text: 'part_time_leave' },
-            // { text: 'overtime_from' },
-            // { text: 'overtime_to' },
-            // { text: 'standby' }
+            { text: 'Date', value: 'date', width: '1%' },
+            { text: 'Hours', value: 'worked', width: '100px' },
+            { text: 'Logs', value: 'text' }
         ]
     }),
 

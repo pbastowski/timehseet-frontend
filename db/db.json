@@ -10,7 +10,8 @@
           "date": "2019-11-01",
           "worked": 8,
           "internal": "",
-          "courses": ""
+          "courses": "",
+          "text": "<template v-slot:item.worked=\"{ item }\">                         \n    <v-text-field type=\"number\" v-model.number=\"item.worked\" />  \n</template>                                                      \n<template v-slot:item.internal=\"{ item }\">                       \n    <v-text-field type=\"number\" v-model.number=\"item.internal\" />\n</template>                                                      \n<template v-slot:item.courses=\"{ item }\">                        \n    <v-text-field type=\"number\" v-model.number=\"item.courses\" /> \n</template>                                                      \n<template v-slot:item.leave=\"{ item }\">                          \n    <v-text-field type=\"number\" v-model.number=\"item.leave\" />   \n</template>"
         },
         {
           "date": "2019-11-04",
@@ -66,9 +67,9 @@
       "timesheet": [
         {
           "date": "2019-11-01",
-          "worked": 6,
+          "worked": 5.5,
           "internal": 2,
-          "courses": 1
+          "courses": 1.5
         },
         {
           "date": "2019-11-04",

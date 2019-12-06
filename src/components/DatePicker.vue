@@ -1,5 +1,5 @@
 <template>
-    <div class="date-picker">
+    <div xclass="date-picker">
         <v-menu
             ref="menu"
             v-model="menu"
